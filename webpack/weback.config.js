@@ -33,7 +33,7 @@ module.exports = {
             use: ["style-loader", "css-loader", "sass-loader"],
           },
           {
-            test: /\.(tsx|js|ts)$/,
+            test: /\.(ts|js)x?$/,
             include: path.resolve(__dirname, "..", "src"),
             exclude: path.resolve(__dirname, "..", "node_modules"),
             use: "babel-loader"
