@@ -1,0 +1,67 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+
+module.exports = {
+    entry: path.resolve(__dirname, "..", "src", "index.tsx"),
+    output: {
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "..", "dist"),
+    },
+    devtool: "source-map",
+    resolve: {
+      extensions: [".ts", ".tsx", ".js", ".jsx"],
+      alias: {
+        '@src': path.resolve(__dirname, 'src'),
+        '@assets': path.resolve(__dirname, 'src/assets')
+      },
+  
+    },
+    devServer: {
+        static: {
+          directory: path.resolve(__dirname, "..", "dist"),
+        },
+        port: 4000,
+        open: true,
+        historyApiFallback: true,
+    },
+    module: {
+        rules: [
+          {
+            test: /\.(scss|css)$/,
+            exclude: /node_modules/,
+            use: ["style-loader", "css-loader", "sass-loader"],
+          },
+          {
+            test: /\.(tsx|js|ts)$/,
+            include: path.resolve(__dirname, "..", "src"),
+            exclude: path.resolve(__dirname, "..", "node_modules"),
+            use: "babel-loader"
+          },
+          {
+            test: /\.(png|jpg|gif|svg)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images'
+            }
+          },
+        ],
+    },
+    // performance: {
+    //     hints: process.env.NODE_ENV === 'production' ? 'warning' : false,
+    //     maxAssetSize: 244 * 1024, // Set your desired size limit in bytes
+    // },
+    optimization: {
+        splitChunks: {
+          chunks: "all",
+        },
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+          favicon: false,
+          template: path.resolve(__dirname, "..", "public/index.html"),
+        }),
+        new ForkTsCheckerWebpackPlugin()
+    ]
+}
