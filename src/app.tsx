@@ -1,9 +1,9 @@
 import React from 'react';
 import { LayoutStyle, MainLayout, ResumeStyle } from './app.style';
-import { Header } from './page/header/header';
-import { Dashboard } from './page/dashboard/dashboard';
-import { Footer } from './page/footer/footer';
-import { SideBar } from './page/side_bar/side_bar';
+import { Header } from './page/header';
+import { Dashboard } from './page/dashboard';
+import { Footer } from './page/footer';
+import { SideBar } from './page/side_bar';
 
 
 export const App: React.FC<{}> = (props) => {
@@ -12,6 +12,7 @@ export const App: React.FC<{}> = (props) => {
       <LayoutStyle>
         
         <SideBar />
+        
 
         <MainLayout>
           <Header />
