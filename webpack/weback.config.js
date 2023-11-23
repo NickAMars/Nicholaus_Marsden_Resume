@@ -10,10 +10,10 @@ module.exports = {
     },
     devtool: "source-map",
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".jsx"],
+      extensions: [".ts", ".tsx", ".js", ".jsx", ".svg", ".jpg", "pdf"],
       alias: {
-        '@src': path.resolve(__dirname, 'src'),
-        '@assets': path.resolve(__dirname, 'src/assets')
+        '@src': path.resolve(__dirname, "..", 'src'),
+        '@assets': path.resolve(__dirname, "..", 'src/assets')
       },
   
     },
@@ -39,13 +39,17 @@ module.exports = {
             use: "babel-loader"
           },
           {
-            test: /\.(png|jpg|gif|svg)$/,
+            test: /\.(png|jpg|gif|pdf)$/,
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
               outputPath: 'images'
             }
           },
+          {
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+          }
         ],
     },
     // performance: {

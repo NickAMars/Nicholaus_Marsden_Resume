@@ -10,6 +10,27 @@ html, body {
 }
 #root {
   height: inherit;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: 1rem;
 }
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%; 
+  } 
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%; } }
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%; } }
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%; } }
+@media only screen and (max-width: 20.7em) {
+  html {
+    font-size: 35%; } }
+@media only screen and (max-width: 18rem) {
+  html {
+    font-size: 30%; } }

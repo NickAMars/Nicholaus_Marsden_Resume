@@ -1,16 +1,14 @@
 import React from 'react';
-import { LayoutStyle, MainLayout, ResumeStyle } from './app.style';
-import { Header } from './page/header';
-import { Dashboard } from './page/dashboard';
-import { Footer } from './page/footer';
-import { SideBar } from './page/side_bar';
+import { MainLayout, ResumeStyle } from './app.style';
+import { Header } from './page/main/header';
+import { Dashboard } from './page/main/dashboard';
+import { Footer } from './page/main/footer';
+import { SideBar } from './page/main/side_bar';
 
 
 export const App: React.FC<{}> = (props) => {
   return (
     <ResumeStyle> 
-      <LayoutStyle>
-        
         <SideBar />
         
 
@@ -19,8 +17,6 @@ export const App: React.FC<{}> = (props) => {
           <Dashboard />
           <Footer />
         </MainLayout>
-
-      </LayoutStyle>
     </ResumeStyle>
   );
 }

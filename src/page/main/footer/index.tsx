@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const FooterStyle = styled.section`
-    height: 5%;
+    height: 3rem;
     background-color: green;
 `;
 
