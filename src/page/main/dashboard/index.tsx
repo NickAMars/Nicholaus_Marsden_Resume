@@ -6,11 +6,12 @@ import {
 import { Resume } from "../../resume";
 
 
-const DashboardStyle = styled.section`
-  /* height: 75%; */
+const DashboardStyle = styled.main`
   height: 70rem;
-  background-color: pink;
+  border-radius: 5px;
   margin-bottom: 5px;
+  padding: 2px;
+  background-color: ${(props)=> props.theme.light.secondary};
 `;
 
 export const Dashboard: React.FC<{}> = (props) => {

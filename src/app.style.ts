@@ -1,16 +1,19 @@
 import styled from 'styled-components'
-const ResumeStyle = styled.div`
+const ResumeStyle = styled.section`
   height: inherit;
   background-color: #AAA;
-  padding: 5rem;
+`
+const ResumeContainerStyle = styled.div`
+  height: inherit;
   display: flex;
+  padding: 5rem;
 `
 const MainLayout = styled.section`
-  /* height: 100%; */
   width: 100%;
 `
 
 export {
     ResumeStyle,
-    MainLayout
+    MainLayout,
+    ResumeContainerStyle
 }

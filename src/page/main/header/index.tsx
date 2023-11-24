@@ -5,7 +5,7 @@ export const Header: React.FC<{}> = (props) => {
     return (
       <HeaderStyle> 
           <HomeLink to="/">
-            <Home fill="purple"/>
+            <Home fill="#000"/>
           </HomeLink>
           <NavList>
             <NavItem>

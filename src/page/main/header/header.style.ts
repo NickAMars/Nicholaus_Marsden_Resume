@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const btnTrigger = keyframes`
+	0% {
+		transform: scale(0.95);
+    background-color: #ffAE42;
+	}
+	70% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.95);
+	}
+`
 
 const HeaderStyle = styled.nav`
-    height: 5rem;
-    background-color: #FFF;
+    height: 7rem;
+    background-color: ${(props)=> props.theme.light.secondary};
     margin-bottom: 5px;
     display: flex;
+    border-radius: 5px;
+    overflow: hidden;
 `;
 
 const NavList = styled.ul`
@@ -14,7 +29,7 @@ const NavList = styled.ul`
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  width: 60%;
+  width: 50%;
 `
 const NavItem = styled.li`
   display: flex;
@@ -22,17 +37,31 @@ const NavItem = styled.li`
   height: inherit;
 `
 const NavLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 1.5rem 2rem;
-  border-radius: 2px;
+  border-radius: 5px;
   font-weight: 700;
+  color: #000;
+  transition: all .45s ease-Out;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &:hover {
+    animation: ${btnTrigger}  1s ease-out 0s 1;
+  }
 `
 const HomeLink = styled(Link)`
-  padding-left: 5px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 8rem;
+  background-color: ${(props)=> props.theme.light.primary};
 `
+
 export {
     HeaderStyle,
     NavList,
