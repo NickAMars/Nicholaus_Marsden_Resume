@@ -6,7 +6,7 @@ module.exports = {
     entry: path.resolve(__dirname, "..", "src", "index.tsx"),
     output: {
         filename: "[name].[contenthash].js",
-        path: path.resolve(__dirname, "..", "dist"),
+        path: path.resolve(__dirname, "..", "dist")
     },
     devtool: "source-map",
     resolve: {

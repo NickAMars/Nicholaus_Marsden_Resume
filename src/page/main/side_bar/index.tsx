@@ -12,15 +12,15 @@ const HeaderContainer = styled.div`
   padding: 1rem 0.5rem;
 `;
 const PrimaryHeader = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 `;
 const SeconderyHeader = styled.span`
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 const ProfileImage = styled.img`
   width: 100%;
   clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   height: 35%;
 `;
 export const SideBar: React.FC<{}> = (props) => {
