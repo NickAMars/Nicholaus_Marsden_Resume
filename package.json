@@ -45,8 +45,10 @@
     "styled-components": "^6.1.1"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "test": "jest --watchAll",
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
-    "start": "webpack --config webpack/webpack.prod.js"
+    "build": "webpack --config webpack/webpack.prod.js",
+    "start": "npm run clean && webpack serve --open --config webpack/webpack.prod.js"
   }
 }
