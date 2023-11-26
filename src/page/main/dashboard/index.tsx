@@ -3,7 +3,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Resume } from "../../resume";
+import { Resume } from "./resume";
+import { Contact } from "./contact";
 
 
 const DashboardStyle = styled.main`
@@ -21,7 +22,7 @@ export const Dashboard: React.FC<{}> = (props) => {
           <Route path="/" element={<>About</>} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/project" element={<>Projects</>} />
-          <Route path="/contact" element={<>Contact</>} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </DashboardStyle>
     );

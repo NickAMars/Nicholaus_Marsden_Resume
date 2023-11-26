@@ -12,4 +12,4 @@ export const Resume: React.FC<{}> = (props) => {
             <embed src={pdfResume} width="100%" height="100%" />
         </>
     );
-  }
+}
