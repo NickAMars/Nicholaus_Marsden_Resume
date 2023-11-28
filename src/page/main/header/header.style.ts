@@ -16,7 +16,7 @@ const btnTrigger = keyframes`
 
 const HeaderStyle = styled.nav`
     height: 7rem;
-    background-color: ${(props)=> props.theme.light.secondary};
+    background-color:${(props)=> props.theme.palette.secondary.main};
     margin-bottom: 5px;
     display: flex;
     border-radius: 5px;
@@ -59,7 +59,7 @@ const HomeLink = styled(Link)`
   justify-content: center;
   align-items: center;
   width: 8rem;
-  background-color: ${(props)=> props.theme.light.primary};
+  background-color: ${(props)=> props.theme.palette.primary.main};
 `
 
 export {

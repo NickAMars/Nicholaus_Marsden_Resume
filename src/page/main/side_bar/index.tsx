@@ -4,7 +4,7 @@ import Work from '@assets/work.jpg';
 const SideBarStyle = styled.div`
   width: 25%;
   height: 60rem;
-  background-color: ${(props)=> props.theme.light.secondary};
+  background-color: ${(props)=> props.theme.palette.secondary.main};
   margin-right: 5px;
   border-radius: 5px;
 `;

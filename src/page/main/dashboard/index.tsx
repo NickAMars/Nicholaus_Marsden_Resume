@@ -12,7 +12,7 @@ const DashboardStyle = styled.main`
   border-radius: 5px;
   margin-bottom: 5px;
   padding: 2px;
-  background-color: ${(props)=> props.theme.light.secondary};
+  background-color: ${(props)=> props.theme.palette.secondary.main};
 `;
 
 export const Dashboard: React.FC<{}> = (props) => {

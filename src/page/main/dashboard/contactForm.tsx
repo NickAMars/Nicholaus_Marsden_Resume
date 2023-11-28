@@ -1,7 +1,18 @@
 import React from 'react'
-import { Formik, Form, Field, ErrorMessage} from 'formik';
+import styled from "styled-components";
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { ContactFormContainer, TitleStyle } from './dashboard.style'
+import { TextField, Button, Container, Typography, TextareaAutosize } from '@mui/material';
+
+
+
+const TitleHeader = styled(Typography)`
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: ${(props)=> props.theme.palette.primary.main};
+    padding-bottom: 2rem;
+`;
 
 interface FormValues {
     name: string;
@@ -17,52 +28,59 @@ const validationSchema = Yup.object().shape({
     name: Yup.string().required('Name is required!'),
     email: Yup.string().email('Invalid email address').required('Email is required'),
     message: Yup.string().required('Message is required!'),
-  });
-
+});
 
 export const ContactForm : React.FC<{}> = (props) => {
 
-  const onSubmit = (values: FormValues, { resetForm }: any) => {
-    // Handle your form submission logic here
-    console.log('Form submitted with values:', values);
-    // Reset the form after successful submission
-    resetForm();
-  };
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: (values: FormValues, { resetForm }: any) => {
+      // Handle form submission logic here
+      console.log('Form submitted:', values);
+      resetForm();
+    },
+  });
   return (
-    <ContactFormContainer>
-        <TitleStyle>
-            Contact Form
-        </TitleStyle>
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={onSubmit}
-            >
-            {({ errors, touched }) => (
-                 <Form>
-                    {/* Form fields go here */}
-                    <div>
-                        <label htmlFor="name">Name:</label>
-                        <Field type="text" id="name" name="name" />
-                        <ErrorMessage name="name" component="div" />
-                    </div>
-            
-                    <div>
-                        <label htmlFor="email">Email:</label>
-                        <Field type="email" id="email" name="email" />
-                        <ErrorMessage name="email" component="div" />
-                    </div>
-            
-                    <div>
-                        <label htmlFor="message">Message:</label>
-                        <Field as="textarea" id="message" name="message" />
-                        <ErrorMessage name="message" component="div" />
-                    </div>
-            
-                    <button type="submit">Submit</button>
-                </Form>
-            )}
-        </Formik>
-    </ContactFormContainer>
+    <Container maxWidth="sm">
+      <TitleHeader variant="h4" gutterBottom>
+        Contact Form
+      </TitleHeader>
+      <form onSubmit={formik.handleSubmit}>
+        <TextField
+          label="First Name"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          name="name"
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          error={formik.touched.name && Boolean(formik.errors.name)}
+          helperText={formik.touched.name && formik.errors.name}
+        />
+        <TextField
+          label="Email"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          type="email"
+          name="email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          error={formik.touched.email && Boolean(formik.errors.email)}
+          helperText={formik.touched.email && formik.errors.email}
+        />
+        <TextareaAutosize
+          minRows={4}
+          placeholder="Message"
+          name="message"
+          value={formik.values.message}
+          onChange={formik.handleChange}
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Submit
+        </Button>
+      </form>
+      </Container>
   )
 }

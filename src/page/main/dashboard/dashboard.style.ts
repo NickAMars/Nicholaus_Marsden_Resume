@@ -31,7 +31,7 @@ const TitleStyle = styled.h1`
     font-size: 1.5rem;
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: ${(props)=> props.theme.light.primary};
+    text-decoration-color: ${(props)=> props.theme.palette.primary.main};
     padding-bottom: 2rem;
 `
 const LabelStyle = styled.h3`
