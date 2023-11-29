@@ -20,6 +20,7 @@ const ContactInfoContainer = styled.div`
 `
 const ContactMapContainer = styled.div`
     display: flex;
+    flex-direction: column;
     /* background-color: lightblue; */
     height: 30rem;
     padding: 0.5rem;

@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import "./global.css";
+import 'leaflet/dist/leaflet.css';
 import { App } from './app';
 import { BrowserRouter as Router } from "react-router-dom";
 import { theme } from './theme';
