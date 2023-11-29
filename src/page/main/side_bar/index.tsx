@@ -7,6 +7,9 @@ const SideBarStyle = styled.div`
   background-color: ${(props)=> props.theme.palette.secondary.main};
   margin-right: 5px;
   border-radius: 5px;
+  @media only screen and (max-width: 47em){
+    display: none;
+  }
 `;
 const HeaderContainer = styled.div`
   padding: 1rem 0.5rem;

@@ -1,40 +1,20 @@
 import React from 'react'
-import styled from "styled-components";
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { TextField, Button, Container, Typography, TextareaAutosize } from '@mui/material';
+import { ContactTitleHeader, ContactFormContainer, ContactFormField, ContactTextField, ContactTextarea, ContactButton } from './contact.style';
+import { contactSchema } from './validation/contact.validation';
+import { FormValues } from './interface/form-value.interface';
 
 
-
-const TitleHeader = styled(Typography)`
-    font-size: 1.5rem;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: ${(props)=> props.theme.palette.primary.main};
-    padding-bottom: 2rem;
-`;
-
-interface FormValues {
-    name: string;
-    email: string;
-    message: string;
-  }
 const initialValues: FormValues = {
     name: '',
     email: '',
     message: ''
 };
-const validationSchema = Yup.object().shape({
-    name: Yup.string().required('Name is required!'),
-    email: Yup.string().email('Invalid email address').required('Email is required'),
-    message: Yup.string().required('Message is required!'),
-});
 
 export const ContactForm : React.FC<{}> = (props) => {
-
   const formik = useFormik({
     initialValues,
-    validationSchema,
+    validationSchema: contactSchema,
     onSubmit: (values: FormValues, { resetForm }: any) => {
       // Handle form submission logic here
       console.log('Form submitted:', values);
@@ -42,45 +22,56 @@ export const ContactForm : React.FC<{}> = (props) => {
     },
   });
   return (
-    <Container maxWidth="sm">
-      <TitleHeader variant="h4" gutterBottom>
+    <ContactFormContainer maxWidth="sm">
+      <ContactTitleHeader variant="h4" gutterBottom>
         Contact Form
-      </TitleHeader>
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
+      </ContactTitleHeader>
+      <ContactFormField onSubmit={formik.handleSubmit}>
+        <ContactTextField
           label="First Name"
-          variant="outlined"
+          variant="filled"
           fullWidth
           margin="normal"
           name="name"
+          size="small" 
           value={formik.values.name}
+          inputProps={{ maxLength: 35 }}
           onChange={formik.handleChange}
           error={formik.touched.name && Boolean(formik.errors.name)}
           helperText={formik.touched.name && formik.errors.name}
         />
-        <TextField
+        <ContactTextField
           label="Email"
-          variant="outlined"
+          variant="filled"
           fullWidth
           margin="normal"
           type="email"
           name="email"
+          size="small" 
           value={formik.values.email}
+          inputProps={{ maxLength: 50 }}
           onChange={formik.handleChange}
           error={formik.touched.email && Boolean(formik.errors.email)}
           helperText={formik.touched.email && formik.errors.email}
         />
-        <TextareaAutosize
+        <ContactTextarea
+          label="Message"
           minRows={4}
-          placeholder="Message"
+          placeholder="Enter Description:"
           name="message"
+          multiline
+          maxRows={4}
+          inputProps={{ maxLength: 150 }}
+          variant="filled"
           value={formik.values.message}
           onChange={formik.handleChange}
+          error={formik.touched.message && Boolean(formik.errors.message)}
+          helperText={formik.touched.message && formik.errors.message}
         />
-        <Button type="submit" variant="contained" color="primary">
+        <ContactButton type="submit" variant="contained" color="primary">
           Submit
-        </Button>
-      </form>
-      </Container>
+        </ContactButton>
+      </ContactFormField>
+    </ContactFormContainer>
   )
 }

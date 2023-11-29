@@ -34,20 +34,7 @@ html, body {
     font-size: 50%; } 
 }
 
-@media only screen and (max-height: 50em){
+@media only screen and (max-height: 45em){
   html {
     font-size: 45%; } 
-}
-
-@media only screen and (max-width: 37.5em) {
-  html {
-    font-size: 40%; } 
-}
-@media only screen and (max-width: 20.7em) {
-  html {
-    font-size: 35%; } 
-}
-@media only screen and (max-width: 18rem) {
-  html {
-    font-size: 30%; } 
 }

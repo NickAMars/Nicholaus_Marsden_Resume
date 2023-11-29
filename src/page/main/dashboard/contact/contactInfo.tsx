@@ -1,9 +1,9 @@
-import { ContactInfoContainer, GroupContentStyle, LabelStyle, ParagraphStyle, TitleStyle } from './dashboard.style'
-
+import { GroupContentStyle, LabelStyle, ParagraphStyle } from '../dashboard.style'
+import { ContactInfoContainer, ContactTitleHeader } from './contact.style';
 export const ContactInfo : React.FC<{}> = (props) => {
   return (
     <ContactInfoContainer>
-        <TitleStyle>Contact Informations</TitleStyle>
+        <ContactTitleHeader>Contact Informations</ContactTitleHeader>
         <GroupContentStyle>
             <LabelStyle>Address:</LabelStyle>
             <ParagraphStyle>Atlanta, Georgia</ParagraphStyle>

@@ -1,4 +1,4 @@
-import { ContactContainer, ContactDataContainer, ContactFormContainer, TitleStyle, ContactMapContainer } from './dashboard.style';
+import { ContactTitleHeader ,ContactContainer, ContactDataContainer, ContactMapContainer } from './contact.style';
 import { ContactInfo } from './contactInfo';
 import { ContactForm } from './contactForm';
 
@@ -11,9 +11,9 @@ export const Contact: React.FC<{}> = (props) => {
                 <ContactInfo />
             </ContactDataContainer>
             <ContactMapContainer>
-                <TitleStyle>
+                <ContactTitleHeader>
                     Contact Map
-                </TitleStyle>
+                </ContactTitleHeader>
             </ContactMapContainer>
         </ContactContainer>
     );
