@@ -1,4 +1,4 @@
-import { HeaderStyle, HomeLink, NavItem, NavLink, NavList } from './header.style'
+import { HeaderStyle, HomeLink, NavButton, NavItem, NavLink, NavList } from './header.style'
 import Home from '@assets/home3.svg'
 
 export const Header: React.FC<{}> = (props) => {
@@ -9,13 +9,19 @@ export const Header: React.FC<{}> = (props) => {
           </HomeLink>
           <NavList>
             <NavItem>
-              <NavLink to="/resume">Resume</NavLink>
+              <NavButton>
+                <NavLink to="/resume">Resume</NavLink>
+              </NavButton>
             </NavItem>
             <NavItem>
-              <NavLink to="/project">Project</NavLink>
+              <NavButton>
+                <NavLink to="/project">Project</NavLink>
+              </NavButton>
             </NavItem>
             <NavItem>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavButton>
+                <NavLink to="/contact">Contact</NavLink>
+              </NavButton>
             </NavItem>
           </NavList>
       </HeaderStyle>

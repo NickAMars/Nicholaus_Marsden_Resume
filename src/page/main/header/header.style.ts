@@ -1,18 +1,7 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
-const btnTrigger = keyframes`
-	0% {
-		transform: scale(0.95);
-    background-color: #ffAE42;
-	}
-	70% {
-		transform: scale(1);
-	}
-	100% {
-		transform: scale(0.95);
-	}
-`
 
 const HeaderStyle = styled.nav`
     height: 7rem;
@@ -36,6 +25,11 @@ const NavItem = styled.li`
   align-items: center;
   height: inherit;
 `
+const NavButton = styled(Button)`
+  display: flex;
+  align-items: center;
+  height: inherit;
+`
 const NavLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -49,10 +43,6 @@ const NavLink = styled(Link)`
   transition: all .45s ease-Out;
   padding-left: 2rem;
   padding-right: 2rem;
-
-  &:hover {
-    animation: ${btnTrigger}  1s ease-out 0s 1;
-  }
 `
 const HomeLink = styled(Link)`
   display: flex;
@@ -67,5 +57,6 @@ export {
     NavList,
     NavItem,
     NavLink,
+    NavButton,
     HomeLink
 }

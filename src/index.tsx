@@ -1,3 +1,4 @@
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import "./global.css";
 import 'leaflet/dist/leaflet.css';
@@ -9,9 +10,11 @@ import { ThemeProvider } from '@mui/material/styles';
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
-    <ThemeProvider theme={theme}>
-                <Router>
-                    <App />
-                </Router>
-    </ThemeProvider>
+    <React.StrictMode>
+        <ThemeProvider theme={theme}>
+                    <Router>
+                        <App />
+                    </Router>
+        </ThemeProvider>
+    </React.StrictMode>
 );

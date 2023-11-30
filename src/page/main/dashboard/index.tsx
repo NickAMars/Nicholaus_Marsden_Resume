@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import { Resume } from "./resume";
 import { Contact } from "./contact";
+import { Project } from "./project";
 
 
 const DashboardStyle = styled.main`
@@ -21,7 +22,7 @@ export const Dashboard: React.FC<{}> = (props) => {
         <Routes>
           <Route path="/" element={<>About</>} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/project" element={<>Projects</>} />
+          <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </DashboardStyle>
