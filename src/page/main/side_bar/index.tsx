@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Work from '@assets/work.jpg';
+import { TimeLine } from "./AboutTimeLine";
+import { Typography } from "@mui/material";
 
 const SideBarStyle = styled.div`
   width: 25%;
@@ -14,11 +16,8 @@ const SideBarStyle = styled.div`
 const HeaderContainer = styled.div`
   padding: 1rem 0.5rem;
 `;
-const PrimaryHeader = styled.h1`
-  font-size: 1.7rem;
-`;
-const SeconderyHeader = styled.span`
-  font-size: 1.2rem;
+const PrimaryHeader = styled(Typography)`
+  font-weight: 900;
 `;
 const ProfileImage = styled.img`
   width: 100%;
@@ -30,14 +29,11 @@ export const SideBar: React.FC<{}> = (props) => {
     return (
       <SideBarStyle> 
         <HeaderContainer>
-          <PrimaryHeader>
-            Nicholaus Marsden
-          </PrimaryHeader>
-          <SeconderyHeader>
-            Software Engineer
-          </SeconderyHeader>
+          <PrimaryHeader variant="h4">Nicholaus Marsden</PrimaryHeader>
+          <Typography variant="h6" >Software Engineer</Typography>
         </HeaderContainer>
-        <ProfileImage src={Work} alt="tree" />
+        <ProfileImage src={Work} alt="work" />
+        <TimeLine />
       </SideBarStyle>
     );
   }
