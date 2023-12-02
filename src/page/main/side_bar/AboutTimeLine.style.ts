@@ -1,6 +1,7 @@
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem } from '@mui/lab'
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import { styled } from 'styled-components'
+import { Typography } from '@mui/material';
 const TimelineContainer = styled(Timeline)`
   width: 100%;
   margin-top: -5rem;
@@ -32,6 +33,9 @@ const TimelineContentStyle  = styled(TimelineContent)`
 const DotStyle  = styled(TimelineDot)`
   margin: 0;
 `
+const Description = styled(Typography)`
+  font-size: 1.2rem;
+`;
 export {
     TimelineContainer,
     TimelineItemStyle,
@@ -39,5 +43,6 @@ export {
     LaptopIcon,
     DotLineConnector,
     TimelineContentStyle,
-    DotStyle
+    DotStyle,
+    Description
 }

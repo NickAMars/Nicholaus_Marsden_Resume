@@ -18,6 +18,7 @@ const HeaderContainer = styled.div`
 `;
 const PrimaryHeader = styled(Typography)`
   font-weight: 900;
+  font-size: 1.7rem;
 `;
 const ProfileImage = styled.img`
   width: 100%;
@@ -25,12 +26,15 @@ const ProfileImage = styled.img`
   margin: 1.5rem 0;
   height: 35%;
 `;
+const SubHeader = styled(Typography)`
+  font-size: 1.3rem;
+`;
 export const SideBar: React.FC<{}> = (props) => {
     return (
       <SideBarStyle> 
         <HeaderContainer>
           <PrimaryHeader variant="h4">Nicholaus Marsden</PrimaryHeader>
-          <Typography variant="h6" >Software Engineer</Typography>
+          <SubHeader variant="h6" >Software Engineer</SubHeader>
         </HeaderContainer>
         <ProfileImage src={Work} alt="work" />
         <TimeLine />
