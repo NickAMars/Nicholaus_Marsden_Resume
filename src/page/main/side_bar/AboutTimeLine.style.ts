@@ -6,6 +6,8 @@ const TimelineContainer = styled(Timeline)`
   width: 100%;
   margin-top: -5rem;
   align-items: flex-start;
+  flex: none;
+  margin-bottom: 1rem;
 `
 const TimelineItemStyle = styled(TimelineItem)`
   min-height: 3rem;

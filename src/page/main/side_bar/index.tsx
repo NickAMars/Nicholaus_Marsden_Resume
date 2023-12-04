@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import Work from '@assets/work.jpg';
 import { TimeLine } from "./AboutTimeLine";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
+import DownloadForOfflineRoundedIcon from '@mui/icons-material/DownloadForOfflineRounded';
+import NICHOLAUS_MARSDEN_RESUME from '@assets/NICHOLAUS_MARSDEN_RESUME.pdf';
 
 const SideBarStyle = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 25%;
   height: 60rem;
   background-color: ${(props)=> props.theme.palette.secondary.main};
@@ -26,18 +30,50 @@ const ProfileImage = styled.img`
   margin: 1.5rem 0;
   height: 35%;
 `;
-const SubHeader = styled(Typography)`
+const SubText = styled(Typography)`
   font-size: 1.3rem;
 `;
+
+const DownLoadButton = styled(Button)`
+    width: 15rem;
+    align-self: center;
+    border-radius: 26px;
+    text-transform: none;
+`;
+
+const DownloadIcon = styled(DownloadForOfflineRoundedIcon)`
+  color: #FFF;
+`;
+
+
+const handleDownload = () => {
+  console.log('Downloading file...');
+  const pdfUrl = NICHOLAUS_MARSDEN_RESUME;
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "NICHOLAUS_MARSDEN_RESUME.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export const SideBar: React.FC<{}> = (props) => {
     return (
       <SideBarStyle> 
         <HeaderContainer>
           <PrimaryHeader variant="h4">Nicholaus Marsden</PrimaryHeader>
-          <SubHeader variant="h6" >Software Engineer</SubHeader>
+          <SubText variant="h6" >Software Engineer</SubText>
         </HeaderContainer>
         <ProfileImage src={Work} alt="work" />
         <TimeLine />
+        <DownLoadButton
+          variant="contained"
+          color="primary"
+          endIcon={<DownloadIcon />}
+          onClick={handleDownload}
+        >
+          <SubText>Download Cv</SubText>
+        </DownLoadButton>
       </SideBarStyle>
     );
   }

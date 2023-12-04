@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { HeaderStyle, HomeLink, NavButton, NavItem, NavLink, NavList } from './header.style'
 import Home from '@assets/home3.svg'
 
@@ -10,17 +11,17 @@ export const Header: React.FC<{}> = (props) => {
           <NavList>
             <NavItem>
               <NavButton>
-                <NavLink to="/resume">Resume</NavLink>
+                <NavLink to="/resume"><Typography variant='h6'>Resume</Typography></NavLink>
               </NavButton>
             </NavItem>
             <NavItem>
               <NavButton>
-                <NavLink to="/project">Project</NavLink>
+                <NavLink to="/project"><Typography variant='h6' >Project</Typography></NavLink>
               </NavButton>
             </NavItem>
             <NavItem>
               <NavButton>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/contact"><Typography variant='h6'>Contact</Typography></NavLink>
               </NavButton>
             </NavItem>
           </NavList>

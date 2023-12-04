@@ -6,6 +6,7 @@ import {
 import { Resume } from "./resume";
 import { Contact } from "./contact";
 import { Project } from "./project";
+import { About } from "./about";
 
 
 const DashboardStyle = styled.main`
@@ -20,7 +21,7 @@ export const Dashboard: React.FC<{}> = (props) => {
     return (
       <DashboardStyle> 
         <Routes>
-          <Route path="/" element={<>About</>} />
+          <Route path="/" element={<About/>} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
