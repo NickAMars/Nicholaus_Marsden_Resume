@@ -8,7 +8,7 @@ import { Interest } from './interest'
 import { styled } from 'styled-components'
 
 const AboutContainer = styled.div`
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     flex-direction:column;
     height: 100%;

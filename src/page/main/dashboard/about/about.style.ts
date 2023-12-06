@@ -7,7 +7,10 @@ const Title = styled(Typography)`
     text-decoration: underline;
     text-decoration-thickness: 0.3rem;
 `
+const SubTitle = styled(Typography)`
+`
 
 export {
-    Title
+    Title,
+    SubTitle
 }

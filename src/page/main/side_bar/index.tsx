@@ -22,7 +22,7 @@ const HeaderContainer = styled.div`
 `;
 const PrimaryHeader = styled(Typography)`
   font-weight: 900;
-  font-size: 1.7rem;
+  font-size: 2rem;
 `;
 const ProfileImage = styled.img`
   width: 100%;

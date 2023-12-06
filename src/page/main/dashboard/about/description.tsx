@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import styled from 'styled-components';
 
 const DescriptionContainer = styled.div`
-    background-color: lightblue;
+    /* background-color: lightblue;  */
 `
 const Title = styled(Typography)`
     font-weight: 900;
