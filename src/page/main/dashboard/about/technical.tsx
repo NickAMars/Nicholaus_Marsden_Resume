@@ -1,40 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Title, SubTitle } from './about.style'
-import { Rating, Typography } from '@mui/material'
+import { Title, SubTitle, TechnicalContainer, SkillContainer, SkillOutline, SecondarySkillGroup, SkillStyle, SubjectStyle } from './about.style'
+import { Rating } from '@mui/material'
 import { PRIMARY_SKILLS, SECONDARY_SKILLS } from './util/constants'
 
-const TechnicalContainer = styled.div`
 
-`
-const SkillContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    /* height: 13rem; */
-`
-const SkillStyle = styled.span`
-    display: flex;
-    width: 18rem;
-    padding-left: 1rem;
-    & > * {
-        flex: 1;
-    }
-`
-const SkillOutline = styled.div`
-    padding: 0 .4rem;
-
-`
-const SecondarySkillGroup = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`
-const SubjectStyle = styled(Typography)`
-
-`
 export const Technical: React.FC<{}> = (props) => {
 
     return<TechnicalContainer>
-                <Title variant='h5'>
+                <Title variant='h4'>
                     Technical Skill:
                 </Title>
                 <SkillContainer>

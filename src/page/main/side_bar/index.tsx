@@ -31,11 +31,11 @@ const ProfileImage = styled.img`
   height: 35%;
 `;
 const SubText = styled(Typography)`
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 `;
 
 const DownLoadButton = styled(Button)`
-    width: 15rem;
+    width: 17rem;
     align-self: center;
     border-radius: 26px;
     text-transform: none;

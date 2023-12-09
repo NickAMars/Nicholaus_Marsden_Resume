@@ -4,7 +4,7 @@ import { educations } from './util/constants'
 
 export const Education: React.FC<{}> = (props) => {
     return  <EducationContainer> 
-                <Title variant='h5'>
+                <Title variant='h4'>
                     Education:
                 </Title>
                 {educations.map((eduction=>

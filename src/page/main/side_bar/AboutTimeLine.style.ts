@@ -36,7 +36,7 @@ const DotStyle  = styled(TimelineDot)`
   margin: 0;
 `
 const Description = styled(Typography)`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 `;
 export {
     TimelineContainer,

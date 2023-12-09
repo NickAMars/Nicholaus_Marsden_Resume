@@ -1,45 +1,55 @@
 import { Typography } from "@mui/material";
 import styled from "styled-components";
 
+const AboutContainer = styled.div`
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+    padding: 2rem 2.5rem;
+`
 
 const Title = styled(Typography)`
     font-weight: 900;
     text-decoration: underline;
     text-decoration-thickness: 0.3rem;
 `
+
+
 const SubTitle = styled(Typography)`
+    font-size: 1.5rem;
 `
 
+//Skills
+const TechnicalContainer = styled.div`
 
-
-// Experience 
-const ExperienceContainer = styled.div`
+`
+const SkillContainer = styled.div`
     display: flex;
     flex-direction: column;
+    /* height: 13rem; */
 `
-const JobStyle = styled.div`
+const SkillStyle = styled.span`
     display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-`
-const CompanyContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    & > *:first-child{
-        font-weight: 900;
+    width: 24rem;
+    padding-left: 1rem;
+    & > * {
+        flex: 1;
     }
 `
-const CompanyDetails = styled(Typography)`
-        font-size: 1.2rem;
+const SkillOutline = styled.div`
+    padding: 0 .4rem;
+    font-size: 1.5rem;
+
+`
+const SecondarySkillGroup = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+const SubjectStyle = styled(Typography)`
+    font-size: 1.4rem;
 `
 
-const CompanyDescription =styled.ul`
-    padding: 0 2rem;
-    font-size: 1.1rem;
-`;
-const BulletPoint =styled.li`
-`;
 
 //Eductation
 const EducationContainer = styled.div`
@@ -53,32 +63,33 @@ const Academic = styled.div`
     justify-content: space-between;
 `
 const AcademicYear = styled(Typography)`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 `
 const AcademicName = styled(Typography)`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 900;
 `
 const AcademicMajor = styled.div`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 `
 
 export {
     Title,
     SubTitle,
 
-    ExperienceContainer,
-    JobStyle,
-    CompanyContainer,
-    CompanyDetails,
-    CompanyDescription,
-    BulletPoint,
+    AboutContainer,
 
     EducationContainer,
     AcademicContainer,
     Academic,
     AcademicYear,
     AcademicName,
-    AcademicMajor
+    AcademicMajor,
 
+    TechnicalContainer,
+    SkillContainer,
+    SkillStyle,
+    SkillOutline,
+    SecondarySkillGroup,
+    SubjectStyle
 }

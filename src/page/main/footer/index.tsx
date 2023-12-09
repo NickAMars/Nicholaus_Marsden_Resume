@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 
 
@@ -10,12 +11,14 @@ const FooterStyle = styled.section`
     justify-content: flex-end;
     width: 100%;
 `;
-const ParagraphStyle = styled.span`
+const ParagraphStyle = styled(Typography)`
   padding-right: 1rem;
+  font-size: 1.2rem;
 `;
 const NameStyle = styled.i`
   text-decoration: underline;
   cursor: pointer;
+  font-weight: 900;
 `;
 export const Footer: React.FC<{}> = (props) => {
     return (

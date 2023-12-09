@@ -1,5 +1,5 @@
 import React from 'react'
-import { BulletPoint, CompanyContainer, CompanyDescription, CompanyDetails, ExperienceContainer, JobStyle, Title } from './about.style'
+import { BulletPoint, CompanyContainer, CompanyDescription, CompanyDetails, ExperienceContainer, JobStyle, Title } from './experience.style'
 import { JOB_EXPERIENCE, DESCRIBE_EXPEIENCE} from './util/constants'
 
 
