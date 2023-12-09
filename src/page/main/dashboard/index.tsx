@@ -1,12 +1,9 @@
+import React, { lazy, Suspense } from 'react';
 import styled from "styled-components";
 import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Contact } from "./contact";
-import { Project } from "./project";
-import { About } from "./about";
-import { Experience } from "./experience";
 
 
 
@@ -22,15 +19,28 @@ const DashboardStyle = styled.main`
   z-index:  100;
 `;
 
+const About = lazy(() => import('./about').then(module => ({ default: module.About})));
+const Experience = lazy(() => import('./experience').then(module => ({ default: module.Experience})));
+const Project = lazy(() => import('./project').then(module => ({ default: module.Project})));
+const Contact = lazy(() => import('./contact').then(module => ({ default: module.Contact})));
+
+const HOC: React.FC< {Component:any }> = (props)=>{
+  const {Component} = props
+  return <Suspense fallback={<div>Loading...</div>}>
+    <Component />
+  </Suspense>
+}
 export const Dashboard: React.FC<{}> = (props) => {
     return (
       <DashboardStyle> 
-        <Routes>
-          <Route path="/" element={<About/>} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={ <About /> } />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
       </DashboardStyle>
     );
   }

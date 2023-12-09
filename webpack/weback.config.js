@@ -1,5 +1,6 @@
 const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, "..", "src", "index.tsx"),
@@ -57,11 +58,13 @@ module.exports = {
     //     maxAssetSize: 244 * 1024, // Set your desired size limit in bytes
     // },
     optimization: {
+        usedExports: true,
         splitChunks: {
           chunks: "all",
         },
     },
     plugins: [
-        new ForkTsCheckerWebpackPlugin()
+        new ForkTsCheckerWebpackPlugin(),
+        new CompressionPlugin(),
     ]
 }

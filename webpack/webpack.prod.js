@@ -6,8 +6,8 @@ const commonConfig =  require("./weback.config");
 module.exports = merge( commonConfig, {
     mode: "production",
     performance: {
-        hints: "warning",
-        maxAssetSize: 244 * 1024, // Set your desired size limit in bytes
+        hints: false, // warning
+        maxEntrypointSize: 500 * 1024, // Set your desired size limit in bytes
     },
     plugins: [
         new HtmlWebpackPlugin({

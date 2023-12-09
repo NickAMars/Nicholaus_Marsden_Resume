@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 const ProjectContainer = styled(Box)`
   min-height: 75rem;
+  padding: 1rem 1.5rem;
 `
 export const Project: React.FC<{}> = (props) => {
   return (
