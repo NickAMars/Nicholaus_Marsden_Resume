@@ -22,7 +22,6 @@ export const About: React.FC<{}> = (props) => {
         <Technical />
         <Experience />
         <Education />
-        <Interest />
         {/* <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly /> */}
     </AboutContainer>
   )

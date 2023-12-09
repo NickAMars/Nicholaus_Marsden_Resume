@@ -10,11 +10,12 @@ import { About } from "./about";
 
 
 const DashboardStyle = styled.main`
-  height: 70rem;
+  height: 75rem;
   border-radius: 5px;
   margin-bottom: 5px;
   padding: 2px;
   background-color: ${(props)=> props.theme.palette.secondary.main};
+  overflow-y: auto;
 `;
 
 export const Dashboard: React.FC<{}> = (props) => {
