@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 const ResumeStyle = styled.section`
   height: inherit;
-  background-color: #AAA;
+  position: relative;
+  /* background-color: #AAA; */
 `
 const ResumeContainerStyle = styled.div`
   height: inherit;

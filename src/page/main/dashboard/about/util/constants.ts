@@ -5,22 +5,22 @@ export const PRIMARY_SKILLS = [
     {subject:"TypeScript", rank: 5},
     {subject:"ReactJS", rank: 5},
     {subject:"NodeJS", rank: 5},
-    {subject:"Express", rank: 5}
-]
-
-export const SECONDARY_SKILLS = [
-    {subject:"Angular", rank: 5}, 
-    {subject:"Spring Boot", rank: 5},
+    {subject:"Express", rank: 5},
     {subject:"Kafka", rank: 5},
     {subject:"Redis", rank: 5},
     {subject:"NoSQL", rank: 5},
     {subject:"SQL", rank: 5},
-    {subject:"Jest", rank: 5},
-    {subject:"Docker", rank: 5},
-    {subject:"Kubernetes", rank: 5},
-    {subject:"AWS", rank: 5},
-    {subject:"Microsoft Azure", rank: 5},
-    {subject:"Junit", rank: 5 }
+    {subject:"Jest", rank: 5}
+]
+
+export const SECONDARY_SKILLS = [
+    {subject:"Angular", rank: 4}, 
+    {subject:"Spring Boot", rank: 4},
+    {subject:"Docker", rank: 4},
+    {subject:"Junit", rank: 4 },
+    {subject:"Kubernetes", rank: 3.5},
+    {subject:"AWS", rank: 3.5},
+    {subject:"Microsoft Azure", rank: 3.5}
 ]
 
 enum COMPANIES {
@@ -75,3 +75,16 @@ export const DESCRIBE_EXPEIENCE = {
         "Effectively used ORM Hibernate to persist Plain Old Java Object (POJO) instances to and from the database, ensuring data integrity and seamless data manipulation. "
     ]
 }
+
+export const educations = [
+    {
+        name: "University of Arkansas",
+        year: "May 2019",
+        major: "Bachelor's of Computer Engineering"
+    },
+    {
+        name: "Los Angeles Valley College",
+        year: "June 2016",
+        major: "Associates of Physics"
+    }
+];

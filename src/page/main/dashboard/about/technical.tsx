@@ -21,10 +21,7 @@ const SkillStyle = styled.span`
     }
 `
 const SkillOutline = styled.div`
-    padding: 0 .4rem; 
-    &:first-child{
-        border-right: 1px double #AAA;
-    }
+    padding: 0 .4rem;
 
 `
 const SecondarySkillGroup = styled.div`

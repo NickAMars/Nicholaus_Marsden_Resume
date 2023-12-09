@@ -4,7 +4,6 @@ import { Description } from './description'
 import { Technical } from './technical'
 import { Experience } from './experience'
 import { Education } from './education'
-import { Interest } from './interest'
 import { styled } from 'styled-components'
 
 const AboutContainer = styled.div`

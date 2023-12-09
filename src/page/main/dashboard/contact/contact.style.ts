@@ -51,7 +51,7 @@ const ContactTextarea = styled(TextField)`
   width: 30rem;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   & div textarea,  & p {
    font-size: 1.2rem;
   }
