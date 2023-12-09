@@ -5,7 +5,7 @@ import MarkerIcon from '@assets/marker.png';
 import { styled } from 'styled-components';
 
 const PopupStyle = styled(Popup)`
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 `
 
 

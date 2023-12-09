@@ -26,7 +26,7 @@ export const TimeLine: React.FC<{}> = (props) => {
           <DotStyle variant="outlined" color="primary" />
           <DotLineConnector />
         </TimelineSeparator>
-        <TimelineContentStyle><Description variant="subtitle1" ><b>Job:</b> Full Stack Javascript Developer</Description></TimelineContentStyle>
+        <TimelineContentStyle><Description variant="subtitle1" ><b>Job:</b> Software Engineer</Description></TimelineContentStyle>
       </TimelineItemStyle>
       <TimelineItemStyle>
         <TimelineSeparator>

@@ -4,7 +4,7 @@ import { Typography, TextField, Button, Container } from '@mui/material';
 const ContactContainer = styled.section`
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-top: 2rem;
 `
 const ContactDataContainer = styled.div`
@@ -27,7 +27,7 @@ const ContactMapContainer = styled.div`
 `
 
 const ContactTitleHeader = styled(Typography)`
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-decoration-color: ${(props)=> props.theme.palette.primary.main};
@@ -43,8 +43,8 @@ const ContactFormField = styled.form`
 const ContactTextField = styled(TextField)`
   width: 30rem;
   margin-top: 0;
-  & input, & p {
-   font-size: 1.2rem;
+  & input, & p, & label {
+   font-size: 1.4rem;
   }
 `;
 const ContactTextarea = styled(TextField)`
@@ -52,8 +52,8 @@ const ContactTextarea = styled(TextField)`
   margin-top: 0;
   margin-bottom: 10px;
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  & div textarea,  & p {
-   font-size: 1.2rem;
+  & div textarea,  & p, & label {
+   font-size: 1.6rem;
   }
 `;
 
