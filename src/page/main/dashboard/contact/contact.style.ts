@@ -6,10 +6,11 @@ const ContactContainer = styled.section`
     flex-direction: column;
     font-size: 1.6rem;
     margin-top: 2rem;
+    min-height: 75rem;
 `
 const ContactDataContainer = styled.div`
     display: flex;
-    height: 38rem;
+    height: 40rem;
     padding-bottom: 1rem;
     justify-content: space-around;
 `
@@ -22,7 +23,7 @@ const ContactMapContainer = styled.div`
     display: flex;
     flex-direction: column;
     /* background-color: lightblue; */
-    height: 30rem;
+    height: 35rem;
     padding: 0.5rem;
 `
 

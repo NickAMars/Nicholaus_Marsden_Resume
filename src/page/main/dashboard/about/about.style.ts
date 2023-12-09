@@ -5,7 +5,7 @@ const AboutContainer = styled.div`
     /* background-color: lightblue; */
     display: flex;
     flex-direction:column;
-    height: 100%;
+    min-height: 75rem;
     padding: 2rem 2.5rem;
 `
 

@@ -11,6 +11,7 @@ const ExperienceContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem 2.5rem;
+    min-height: 75rem;
 `
 const JobStyle = styled.div`
     display: flex;
