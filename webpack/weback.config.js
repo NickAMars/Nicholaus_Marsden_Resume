@@ -6,7 +6,8 @@ module.exports = {
     entry: path.resolve(__dirname, "..", "src", "index.tsx"),
     output: {
         filename: "[name].[contenthash].js",
-        path: path.resolve(__dirname, "..", "dist")
+        path: path.resolve(__dirname, "..", "dist"),
+        publicPath: path.resolve(__dirname, "..", "dist"),
     },
     devtool: "source-map",
     resolve: {
@@ -44,7 +45,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'images'
+              outputPath: '/images'
             }
           },
           {

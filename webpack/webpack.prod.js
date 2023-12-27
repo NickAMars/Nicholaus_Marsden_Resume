@@ -13,6 +13,7 @@ module.exports = merge( commonConfig, {
         new HtmlWebpackPlugin({
           favicon: false,
           template: path.resolve(__dirname, "..", "public/index.html"),
+          filename: path.resolve(__dirname, "..", "dist/index.html"),
           minify: {
             removeComments: true
           }

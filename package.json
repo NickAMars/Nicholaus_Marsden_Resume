@@ -5,6 +5,7 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
+  "homepage": ".",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -61,7 +62,7 @@
     "clean": "rm -rf dist",
     "test": "jest --watchAll",
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.prod.js",
+    "build": "npm run clean && webpack --config webpack/webpack.prod.js",
     "start": "npm run clean && webpack serve --open --config webpack/webpack.prod.js"
   }
 }
