@@ -54,7 +54,7 @@ const ContactTextarea = styled(TextField)`
   margin-bottom: 10px;
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   & div textarea,  & p, & label {
-   font-size: 1.6rem;
+   font-size: 1.4rem;
   }
 `;
 
