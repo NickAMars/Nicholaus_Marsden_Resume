@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 
 
@@ -39,6 +40,10 @@ export const Dashboard: React.FC<{}> = (props) => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
+            <Route
+                path="/index.html"
+                element={<Navigate to="/" replace />}
+            />
           </Routes>
         </Suspense>
       </DashboardStyle>

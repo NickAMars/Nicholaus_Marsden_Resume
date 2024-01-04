@@ -1,19 +1,21 @@
 enum COMPANIES {
-    NBCU="NBCU",
+    UOR="Universal Orlando Resort",
     IBM="IBM",
     SBD= "Stanley Black and Decker",
     ITG= "Itlize Global LLC"
 }
 
 export const JOB_EXPERIENCE = [
-    {Company:COMPANIES.NBCU, JobTitle: "Sr. Integration Engineer", Location: "REMOTE" ,Years: "June 2023 - Present"}, 
-    {Company:COMPANIES.IBM, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Feb 2022 -  June 2023"}, 
+    {Company:COMPANIES.UOR, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Present"}, 
+    {Company:COMPANIES.IBM, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Feb 2022 -  Aug 2023"}, 
     {Company:COMPANIES.SBD, JobTitle: "Full Stack Developer", Location: "REMOTE" ,Years: "Oct 2020 - Feb 2022"}, 
     {Company:COMPANIES.ITG, JobTitle: "Full Stack Developer", Location: "Piscataway, NJ" ,Years: "June 2019 - Oct 2020"}, 
 ]
 export const DESCRIBE_EXPEIENCE = {
-    [COMPANIES.NBCU]: [
+    [COMPANIES.UOR]: [
         "Worked in an Agile environment to develop on Theme Park application for Universal Studio",
+        "Worked on React componentizing the application into individual pieces and implementing HOC for reusable structure.",
+        "Used React hooks such as useState, useEffect, useCallback, useRedux etc.",
         "Develop restful API, event processor, functions in a microservice environment using tools like express, Kafka and azure function for transfer of data in a NodeJS environment.",
         "Applied knowledge of typescript, using properties such as class, decorators, overload functions and generic.",
         "Worked with NoSQL and SQL database such as CouchDB and MSSQL for storing records.",
