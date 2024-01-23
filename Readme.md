@@ -31,3 +31,5 @@ webpack serve --config webpack/webpack.prod.config.js --open
 
 ### for inline svg in react application
 https://www.npmjs.com/package/@svgr/webpack
+
+Hi
