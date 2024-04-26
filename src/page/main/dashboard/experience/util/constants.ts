@@ -9,7 +9,7 @@ export const JOB_EXPERIENCE = [
     {Company:COMPANIES.UOR, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Present"}, 
     {Company:COMPANIES.IBM, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Feb 2022 -  Aug 2023"}, 
     {Company:COMPANIES.SBD, JobTitle: "Full Stack Developer", Location: "REMOTE" ,Years: "Oct 2020 - Feb 2022"}, 
-    {Company:COMPANIES.ITG, JobTitle: "Full Stack Developer", Location: "Piscataway, NJ" ,Years: "June 2019 - Oct 2020"}, 
+    {Company:COMPANIES.ITG, JobTitle: "Full Stack Developer", Location: "Piscataway, NJ" ,Years: "June 2018 - Oct 2020"}, 
 ]
 export const DESCRIBE_EXPEIENCE = {
     [COMPANIES.UOR]: [
