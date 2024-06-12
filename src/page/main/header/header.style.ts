@@ -18,7 +18,7 @@ const NavList = styled.ul`
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  width: 50%;
+  width: 100%;
 `
 const NavItem = styled.li`
   display: flex;
@@ -29,6 +29,9 @@ const NavButton = styled(Button)`
   display: flex;
   align-items: center;
   height: inherit;
+  @media only screen and (max-width: 47em){ 
+    width: 90px;
+  }
 `
 const NavLink = styled(Link)`
   display: flex;
@@ -50,6 +53,9 @@ const HomeLink = styled(Link)`
   align-items: center;
   width: 8rem;
   background-color: ${(props)=> props.theme.palette.primary.main};
+  @media only screen and (max-width: 47em){
+    width: auto;
+  }
 `
 
 export {

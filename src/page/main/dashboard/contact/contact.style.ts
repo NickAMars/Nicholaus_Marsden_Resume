@@ -13,6 +13,9 @@ const ContactDataContainer = styled.div`
     height: 40rem;
     padding-bottom: 1rem;
     justify-content: space-around;
+    @media only screen and (max-width: 47em){
+      display: table; 
+    } 
 `
 const ContactInfoContainer = styled.div`
     flex: 1;
