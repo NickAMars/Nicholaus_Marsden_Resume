@@ -22,6 +22,7 @@ const ProjectTitle =styled(Typography)`
 const ProjectDescription =styled(Typography)`
     margin-left: 10px;
     color: #000;
+    display: inline-block;
 `
 export {
     Item,
