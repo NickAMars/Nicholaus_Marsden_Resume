@@ -7,6 +7,7 @@ const Item = styled.a`
     flex-direction: column;
     text-decoration: none;
     border-radius: 10px;
+    min-height: 300px;
     /* justify-content: center; */
     /* height: 100%; */
 `
