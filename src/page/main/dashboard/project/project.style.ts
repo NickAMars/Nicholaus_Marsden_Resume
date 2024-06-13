@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { styled } from 'styled-components'
 
 const Item = styled.a`
-    background-color: lightblue;
+    background-color: #eee;
     display: flex;
     flex-direction: column;
     text-decoration: none;
