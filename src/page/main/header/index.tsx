@@ -9,7 +9,7 @@ export const Header: React.FC<{}> = (props) => {
             <Home fill="#000"/>
           </HomeLink>
           <NavList>
-          <NavItem>
+            <NavItem>
               <NavButton>
                 <NavLink to="/experience"><Typography variant='h6' >Experience</Typography></NavLink>
               </NavButton>

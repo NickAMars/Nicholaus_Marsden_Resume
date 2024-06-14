@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const SoftDescriptionContainer = styled.div`
     /* background-color: lightblue;  */
+    padding-bottom: 1rem;
 `
 const Title = styled(Typography)`
     font-weight: 900;

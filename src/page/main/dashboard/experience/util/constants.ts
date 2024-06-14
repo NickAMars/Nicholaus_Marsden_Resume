@@ -1,54 +1,45 @@
 enum COMPANIES {
+    CWN="Cricket Wireless",
     UOR="Universal Orlando Resort",
     IBM="IBM",
     SBD= "Stanley Black and Decker",
     ITG= "Itlize Global LLC"
 }
-
 export const JOB_EXPERIENCE = [
-    {Company:COMPANIES.UOR, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Present"}, 
+    {Company:COMPANIES.CWN, JobTitle: "Full Stack Software Engineer", Location: "HYBRID" ,Years: "Feb 2024 - Present"}, 
+    {Company:COMPANIES.UOR, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Feb 2024"}, 
     {Company:COMPANIES.IBM, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Feb 2022 -  Aug 2023"}, 
-    {Company:COMPANIES.SBD, JobTitle: "Full Stack Developer", Location: "REMOTE" ,Years: "Oct 2020 - Feb 2022"}, 
+    {Company:COMPANIES.SBD, JobTitle: "Software Developer", Location: "REMOTE" ,Years: "Oct 2020 - Feb 2022"}, 
     {Company:COMPANIES.ITG, JobTitle: "Full Stack Developer", Location: "Piscataway, NJ" ,Years: "June 2018 - Oct 2020"}, 
 ]
 export const DESCRIBE_EXPEIENCE = {
+    [COMPANIES.CWN]: [
+        "Created a custom npm module to manipulate the DOM by injecting modals, updating plan features, and adding promotional content into a microservice frontend. This enhanced user experience by displaying account-specific content and errors across 15+ pages. Utilized JavaScript, TypeScript, and Node.js",
+        "Implemented Google Analytics into the frontend system to track user interactions of over 40K+ daily users. This integration provided insights into the checkout process using JavaScript and TypeScript.",
+        "Converted a legacy codebase from JavaScript, React, Angular 15 and Node.js to meet internal company standards. This redesign optimized new feature implementation time by 40-50%.",
+        "Authored comprehensive documentation to improve code readability by over 60%, and introduced architectural standards",
+        "Worked with a backend team of 12+ engineers using Swagger documentation for RESTful APIs. Technologies included TypeScript, JavaScript, Node.js, Java, Spring Boot, MongoDB,  Docker,  Kubernetes and Azure.",
+        "Applied Jest for unit and integration tests, boosting test coverage of repositories to at least 90%."
+    ],
     [COMPANIES.UOR]: [
-        "Worked in an Agile environment to develop on Theme Park application for Universal Studio",
-        "Worked on React componentizing the application into individual pieces and implementing HOC for reusable structure.",
-        "Used React hooks such as useState, useEffect, useCallback, useRedux etc.",
-        "Develop restful API, event processor, functions in a microservice environment using tools like express, Kafka and azure function for transfer of data in a NodeJS environment.",
-        "Applied knowledge of typescript, using properties such as class, decorators, overload functions and generic.",
-        "Worked with NoSQL and SQL database such as CouchDB and MSSQL for storing records.",
-        "Applied test towards code base in a BDD approach with mocha and chai, before updating to the GitLab pipeline.",
-        "Collaborated with the internal team, which consists of architecture, developers, and QA. To provide feedback on system updates, divide the epic from Jira into individual pieces and estimate the complexity of the tickets."
+        "Developed an event processor using Kafka in Node.js, increasing the throughput of ticket registrations to over 150+ per second for Universal Orlando Studio, leveraging AWS services for scalable infrastructure.",
+        "Implemented a feature that integrated a backend solution within JavaScript, TypeScript, and React, allowing users to add up to 100 guests to their party, with backend services deployed on AWS.",
+        "Created a RESTful API in JavaScript, TypeScript, and Node.js, enhancing customer satisfaction by enabling users to receive and modify their data within CouchDB and/or MSSQL. Additionally, implemented performance optimization features using Redis.",
+        "Worked on Swagger documentation and applied test cases to edge cases, significantly increasing code quality."
 
     ],
     [COMPANIES.IBM]: [
-        "Proficient in building dynamic, interactive web applications using React and its core concepts such as components, state, and props. ",
-        "Utilized carbon components and styled-components library with CSS to create reusable components with JSX. ",
-        "Designed and implemented interactions between components and view models using the MVVM architectural approach. ",
-        "Leveraged MobX.js to observe and react to state changes in modules for efficient view updates. ",
-        "Developed RESTful APIs using expressJS and Implemented scheduling tasks in Node.js with cronJS. ",
-        "Developed a Node.js Event Emitter to trigger events for logging in CloudantDB and data transmission to other services. ",
-        "Improved test coverage to 90% for modules using Jest framework with unit and integrational testing. ",
-        "Collaborated with Business Analysts, Project Owners, Stakeholders, and Developers on Epics and story requirements. "
+        "Contributed to a $3B ecosystem growth project, working with technologies including JavaScript, React, MobX, Node.js, Java, Spring Boot, Redis, Kafka, Kubernetes, Docker, IBM Cloud, DB2, and CloudantDB.",
+        "Transitioned 90K+ opportunities (Software/SaaS/Hardware) from PRM to DMT for processing new incentives. Utilized automated and manual approaches to determine incentive eligibility using TypeScript, React, and Node.js. ",
+        "Created dynamic tables, user forms, transition logic, filters, and other key features in JavaScript, TypeScript, React, and MobX, enhancing user navigation through the UI/UX.",
+        "Developed permissions, approval settings, exchange rates, and other essential features in TypeScript and Node.js, playing a crucial role in application delivery."
     ],
     [COMPANIES.SBD]: [
-        "Developed and modified single-page applications using React.js and Node.js, optimizing user experience and application performance. ",
-        "Implemented WebSockets to enhance real-time notifications and updates, reducing polling and ensuring efficient data transmission. ",
-        "Utilized redux.js as a powerful state management library, enabling seamless data handling across components, and leveraged props for effective data communication. ",
-        "Documented microservices APIs with swagger documentation, facilitating easy accessibility through Azure API management for stakeholders. ",
-        "Implemented Middleware using Joi to enforce role-based access control and validate path variables, query parameters, and request bodies, ensuring data security and application integrity. ",
-        "Worked with internationalization (i18n) support in the application, accommodating diverse language variations to reach a global audience. ",
-        "Contributed to test development for the CI/CD Jenkins pipeline."
+        "Engineered a system using JavaScript, React, Redux and Vue.js to harness industry-level activity data, informing day-to-day activities within each individual manufacturing plant.",
+        "Data collected from an Azure MS SQL database was filtered using SQL queries in Node.js to provide CRUD operations, authentication, and authorization. I also cached data with Redis in Node.js and supplied data for charts, tables, widgets, and navigation forms in React."
     ],
     [COMPANIES.ITG]: [
-        "Successfully migrated a module from the legacy implementation of Jinja to React.js, improving user experience and streamlining codebase maintenance. ",
-        "Leveraged Webpack configuration to optimize the build process of React.js applications, utilizing plugins and loaders for seamless development. ",
-        "Collaborated within a dynamic team environment to expand knowledge and proficiency in Angular 6 and Spring Boot, contributing to project success.",
-        "Implemented global state management using the NGRX library, skillfully using actions, reducers, effects, and selectors for efficient data management. ",
-        "Utilized Swagger UI as an API documentation tool, providing clear and accessible representations of backend APIs, enhancing team productivity.",
-        "Implemented robust exception handling strategies throughout the module, utilizing Controller Advice to format and return JSON responses, ensuring application stability. ",
-        "Effectively used ORM Hibernate to persist Plain Old Java Object (POJO) instances to and from the database, ensuring data integrity and seamless data manipulation. "
+        "Integrated a JavaScript and React front end with a backend AI solution, providing analyzed and highlighted medical details to emphasize affected areas in patient CT scans.",
+        "Created an internal managerial system to track employee progress, provide feedback, ensure data security, and manage other aspects using JavaScript, TypeScript, Angular 6, Spring Boot, Node.js and AWS."
     ]
 }

@@ -22,7 +22,7 @@ const SubTitle = styled(Typography)`
 
 //Skills
 const TechnicalContainer = styled.div`
-
+    padding-bottom: 1rem;
 `
 const SkillContainer = styled.div`
     display: flex;
@@ -53,7 +53,7 @@ const SubjectStyle = styled(Typography)`
 
 //Eductation
 const EducationContainer = styled.div`
-
+    padding-bottom: 1rem;
 `
 const AcademicContainer = styled.div`
     width: 30rem;
@@ -70,6 +70,10 @@ const AcademicName = styled(Typography)`
     font-weight: 900;
 `
 const AcademicMajor = styled.div`
+    font-size: 1.5rem;
+`
+
+const CertificateContainer = styled.div`
     font-size: 1.5rem;
 `
 
@@ -91,5 +95,7 @@ export {
     SkillStyle,
     SkillOutline,
     SecondarySkillGroup,
-    SubjectStyle
+    SubjectStyle,
+
+    CertificateContainer
 }

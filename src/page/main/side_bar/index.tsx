@@ -64,7 +64,7 @@ export const SideBar: React.FC<{}> = (props) => {
           <PrimaryHeader variant="h4">Nicholaus Marsden</PrimaryHeader>
           <SubText variant="h6" >Software Engineer</SubText>
         </HeaderContainer>
-        <ProfileImage src={Work} alt="work" />
+        <ProfileImage loading="lazy" src={Work} alt="Personal" />
         <TimeLine />
         <DownLoadButton
           variant="contained"

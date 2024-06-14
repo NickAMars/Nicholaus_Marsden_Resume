@@ -25,12 +25,6 @@ const Experience = lazy(() => import('./experience').then(module => ({ default: 
 const Project = lazy(() => import('./project').then(module => ({ default: module.Project})));
 const Contact = lazy(() => import('./contact').then(module => ({ default: module.Contact})));
 
-const HOC: React.FC< {Component:any }> = (props)=>{
-  const {Component} = props
-  return <Suspense fallback={<div>Loading...</div>}>
-    <Component />
-  </Suspense>
-}
 export const Dashboard: React.FC<{}> = (props) => {
     return (
       <DashboardStyle> 
@@ -41,7 +35,7 @@ export const Dashboard: React.FC<{}> = (props) => {
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route
-                path="/index.html"
+                path="*"
                 element={<Navigate to="/" replace />}
             />
           </Routes>

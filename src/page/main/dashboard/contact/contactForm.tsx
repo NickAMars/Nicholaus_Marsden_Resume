@@ -17,7 +17,7 @@ export const ContactForm : React.FC<{}> = (props) => {
     validationSchema: contactSchema,
     onSubmit: (values: FormValues, { resetForm }: any) => {
       // Handle form submission logic here
-      console.log('Form submitted:', values);
+      // console.log('Form submitted:', values);
       resetForm();
     },
   });
@@ -28,7 +28,7 @@ export const ContactForm : React.FC<{}> = (props) => {
       </ContactTitleHeader>
       <ContactFormField onSubmit={formik.handleSubmit}>
         <ContactTextField
-          label="First Name"
+          label="Full Name"
           variant="filled"
           fullWidth
           margin="normal"

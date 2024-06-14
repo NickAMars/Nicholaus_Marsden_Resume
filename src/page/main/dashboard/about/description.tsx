@@ -17,9 +17,9 @@ export const Description: React.FC<{}> = (props) => {
     return  <DescriptionContainer >
                 <Title variant='h4'>Description:</Title>
                 <DescriptionStyle variant='h6'>
-                    Results-driven Software Engineer with 6 years of Agile development experience.
-                    Proficient in <b>React.js, Angular, Node.js and Spring Boot.</b> Passionate 
-                    about optimizing application performance and streamlining processes.
+                    Full Stack Developer with 5 years of Agile development experience, adept at collaborating with cross-functional
+                    teams. Proficient in  <b>JavaScript, Typescript, React.js, Node.js and Spring Boot</b> with a passion for optimizing application
+                    performance and streamlining processes.
                 </DescriptionStyle>
             </DescriptionContainer>
 }

@@ -16,10 +16,11 @@ export const PRIMARY_SKILLS = [
 export const SECONDARY_SKILLS = [
     {subject:"Angular", rank: 4}, 
     {subject:"Spring Boot", rank: 4},
+    {subject:"Java", rank: 4}, 
+    {subject:"AWS", rank: 4},
     {subject:"Docker", rank: 4},
-    {subject:"Junit", rank: 4 },
+    {subject:"Junit", rank: 3.5 },
     {subject:"Kubernetes", rank: 3.5},
-    {subject:"AWS", rank: 3.5},
     {subject:"Microsoft Azure", rank: 3.5}
 ]
 
