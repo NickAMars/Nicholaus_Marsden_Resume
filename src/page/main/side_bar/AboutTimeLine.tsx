@@ -39,7 +39,13 @@ export const TimeLine: React.FC<{}> = (props) => {
         <TimelineSeparator>
           <DotStyle variant="outlined" color="primary"/>
         </TimelineSeparator>
-        <TimelineContentStyle><Description variant="subtitle1" ><b>BirthDay</b>: April 2</Description></TimelineContentStyle>
+        <TimelineContentStyle>
+          <Description variant="subtitle1" ><b>LinkedIn</b>: 
+            <a href='https://www.linkedin.com/in/nicholausmarsden' target="_black">
+              nicholausmarsden
+            </a>
+          </Description>
+        </TimelineContentStyle>
       </TimelineItemStyle>
       
       

@@ -5,6 +5,7 @@ const commonConfig =  require("./weback.config");
 
 module.exports = merge( commonConfig, {
     mode: "development",
+    devtool: "source-map",
     performance: {
         hints: false,
         maxAssetSize: 244 * 1024, // Set your desired size limit in bytes

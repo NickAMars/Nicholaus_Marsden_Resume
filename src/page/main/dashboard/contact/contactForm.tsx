@@ -18,7 +18,10 @@ const sendMessage = async (values: FormValues, resetForm: any) =>{
           fullName: values.name,
           email: values.email,
           message: values.message
-        })
+        }, { headers:{
+          'Content-Type': 'application/json'
+        }})
+        // code use a toast verify the user that data hase been sent
         console.log("Successfully handled")
       }catch(error){
         console.error(error);

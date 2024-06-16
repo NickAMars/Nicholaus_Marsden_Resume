@@ -34,7 +34,7 @@ export const Project: React.FC<{}> = (props) => {
                        <span> <strong>Created:</strong> <i>Feb 2024</i> </span>
                     </ProjectDescription>
                     <ProjectDescription variant="body1">
-                      Developed this website as a project for cricket in the interview process in 2-3 days.
+                      Create a imitation cricket website withing three days before joining cricket.  
                     </ProjectDescription>
                 </Item>
             </Grid>

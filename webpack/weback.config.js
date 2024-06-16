@@ -8,7 +8,6 @@ module.exports = {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "..", "dist")
     },
-    devtool: "source-map",
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".jsx", ".svg", ".jpg", "pdf"],
       alias: {
