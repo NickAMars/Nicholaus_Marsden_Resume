@@ -47,6 +47,7 @@
     "@svgr/webpack": "^8.1.0",
     "@types/leaflet": "^1.9.8",
     "@types/react-leaflet": "^3.0.0",
+    "axios": "^1.7.2",
     "formik": "^2.4.5",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
@@ -63,6 +64,6 @@
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
     "start": "webpack serve --open --config webpack/webpack.prod.js",
     "build": "npm run clean && webpack --config webpack/webpack.prod.js",
-    "docker:build":"docker build -t client ." 
+    "docker:build": "docker build -t client ."
   }
 }

@@ -47,7 +47,6 @@ const DownloadIcon = styled(DownloadForOfflineRoundedIcon)`
 
 
 const handleDownload = () => {
-  console.log('Downloading file...');
   const pdfUrl = NICHOLAUS_MARSDEN_RESUME;
   const link = document.createElement("a");
   link.href = pdfUrl;

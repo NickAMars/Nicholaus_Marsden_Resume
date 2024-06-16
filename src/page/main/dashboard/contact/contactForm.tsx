@@ -3,7 +3,8 @@ import { useFormik } from 'formik';
 import { ContactTitleHeader, ContactFormContainer, ContactFormField, ContactTextField, ContactTextarea, ContactButton } from './contact.style';
 import { contactSchema } from './validation/contact.validation';
 import { FormValues } from './interface/form-value.interface';
-
+import axios from 'axios';
+import { useModal } from '@src/context/ModalContext';
 
 const initialValues: FormValues = {
     name: '',
@@ -11,14 +12,38 @@ const initialValues: FormValues = {
     message: ''
 };
 
+const sendMessage = async (values: FormValues, resetForm: any) =>{
+      try{
+        await axios.post('https://api.nicholausamarsden.com/send', {
+          fullName: values.name,
+          email: values.email,
+          message: values.message
+        })
+        console.log("Successfully handled")
+      }catch(error){
+        console.error(error);
+      }finally{
+        resetForm();
+      }
+}
+
 export const ContactForm : React.FC<{}> = (props) => {
+  const {showModal} = useModal();
   const formik = useFormik({
     initialValues,
     validationSchema: contactSchema,
-    onSubmit: (values: FormValues, { resetForm }: any) => {
-      // Handle form submission logic here
-      // console.log('Form submitted:', values);
-      resetForm();
+    // use this to open up the modal instead and then exicute the request
+    onSubmit: async (values: FormValues, {resetForm}: any) => {
+      if(showModal){
+        showModal(
+          {
+            fullName: values.name,
+            email: values.email,
+            message: values.message,
+            onSubmit: sendMessage.bind(null, values, resetForm)
+          }
+        )
+      }
     },
   });
   return (
@@ -61,7 +86,7 @@ export const ContactForm : React.FC<{}> = (props) => {
           name="message"
           multiline
           maxRows={4}
-          inputProps={{ maxLength: 150 }}
+          inputProps={{ maxLength: 255 }}
           variant="filled"
           value={formik.values.message}
           onChange={formik.handleChange}

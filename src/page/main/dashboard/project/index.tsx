@@ -28,7 +28,7 @@ export const Project: React.FC<{}> = (props) => {
             </Grid>
             <Grid item xs={6}>
                 <Item href="https://cricket-mock.surge.sh/" target="_blank">
-                    <ProjectTitle variant="h5">Cricket Website</ProjectTitle>
+                    <ProjectTitle variant="h5">Cricket Website Re-create</ProjectTitle>
                     <ProjectImage  loading="lazy" src={CRICKET_WEBSITE} alt="cricket website"/>
                     <ProjectDescription variant="body1">                    
                        <span> <strong>Created:</strong> <i>Feb 2024</i> </span>
