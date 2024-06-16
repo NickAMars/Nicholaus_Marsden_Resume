@@ -54,6 +54,12 @@ const ModalButton = styled(Button)`
     margin-right: 2rem;
     font-weight: bold;
 `;
+const Message = styled(Typography)`
+    overflow-wrap: break-word;
+    height: 150px;
+    width: 100%;
+    
+`;
 export const Modal = () => {
   const { show, hideModal, data } = useModal();
   const closeModal  = useCallback(()=>{
@@ -75,7 +81,7 @@ export const Modal = () => {
                         <Typography variant='h4'>Email:</Typography>
                         <Typography variant='h5'>{data?.email}</Typography>
                         <Typography variant='h4'>Message:</Typography>
-                        <Typography variant='h5'>{data?.message}</Typography>
+                        <Message variant='h5'>{data?.message}</Message>
                     </ModalBody>
                     <ModalFooter>
                         <ModalButton onClick={closeModal} variant="contained" color="error">
