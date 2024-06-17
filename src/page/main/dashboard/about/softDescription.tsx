@@ -19,10 +19,9 @@ export const SoftDescription: React.FC<{}> = (props) => {
                 <Title variant='h4'>Soft Skills:</Title>
                 <DescriptionStyle variant='h6'>
                 Possesses strong attention to detail and organization,
-                effective time management, excellent rapport with individuals and groups,
-                advanced written and oral communication skills, analytical thinking and problem-solving abilities,
-                efficient and fast learning capabilities, high adaptability to change,
-                and outstanding leadership and team management skills.
+                effective time management,
+                advanced written and oral communication skills, analytical thinking and problem-solving abilities and
+                efficient and fast learning capabilities.
                 </DescriptionStyle>
                 
             </SoftDescriptionContainer>

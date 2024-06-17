@@ -6,8 +6,8 @@ enum COMPANIES {
     ITG= "Itlize Global LLC"
 }
 export const JOB_EXPERIENCE = [
-    {Company:COMPANIES.CWN, JobTitle: "Software Engineer", Location: "Atlanta, GA (HYBRID)" ,Years: "Feb 2024 - Present"}, 
-    {Company:COMPANIES.UOR, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Feb 2024"}, 
+    {Company:COMPANIES.CWN, JobTitle: "Full Stack Engineer", Location: "Atlanta, GA (HYBRID)" ,Years: "Feb 2024 - Present"}, 
+    {Company:COMPANIES.UOR, JobTitle: "Senior Software Engineer", Location: "REMOTE" ,Years: "Aug 2023 - Feb 2024"}, 
     {Company:COMPANIES.IBM, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Feb 2022 -  Aug 2023"}, 
     {Company:COMPANIES.SBD, JobTitle: "Software Engineer", Location: "REMOTE" ,Years: "Oct 2020 - Feb 2022"}, 
     {Company:COMPANIES.ITG, JobTitle: "Full Stack Developer", Location: "Piscataway, NJ" ,Years: "June 2018 - Oct 2020"}, 
