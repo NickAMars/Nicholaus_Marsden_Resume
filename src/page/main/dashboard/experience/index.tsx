@@ -14,9 +14,7 @@ export const Experience: React.FC<{}> = (props) => {
                         <CompanyContainer> <CompanyDetails>{job.Company}</CompanyDetails> <CompanyDetails>{job.Location}</CompanyDetails>  </CompanyContainer>
                         <CompanyContainer> <CompanyDetails>{job.JobTitle}</CompanyDetails> <CompanyDetails>{job.Years}</CompanyDetails>  </CompanyContainer>
                         <CompanyDescription>
-                            {DESCRIBE_EXPEIENCE[job.Company].map((description,i) => (
-                                <BulletPoint key={i}>{description}</BulletPoint>
-                            ))}
+                            {DESCRIBE_EXPEIENCE[job.Company]}
                         </CompanyDescription>
                     </JobStyle>
                 ))

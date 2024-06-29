@@ -1,7 +1,7 @@
 import React from 'react'
 import { Title, SubTitle, TechnicalContainer, SkillContainer, SkillOutline, SecondarySkillGroup, SkillStyle, SubjectStyle } from './about.style'
 import { Rating } from '@mui/material'
-import { PRIMARY_SKILLS, SECONDARY_SKILLS } from './util/constants'
+import { PRIMARY_SKILLS } from './util/constants'
 
 
 export const Technical: React.FC<{}> = (props) => {
@@ -20,17 +20,6 @@ export const Technical: React.FC<{}> = (props) => {
                                     <Rating name="half-rating-read" defaultValue={skill.rank} precision={0.5} readOnly />
                                 </SkillStyle>
                             ))}
-                        </SecondarySkillGroup>
-                    </SkillOutline>
-                    <SkillOutline>
-                        <SubTitle variant='h6'>Secondary Skills</SubTitle>
-                        <SecondarySkillGroup>
-                        {SECONDARY_SKILLS.map(skill => (
-                            <SkillStyle key={skill.subject}>
-                                <SubjectStyle variant='body1'>{skill.subject} :</SubjectStyle> 
-                                <Rating name="half-rating-read" defaultValue={skill.rank} precision={0.5} readOnly />
-                            </SkillStyle>
-                        ))}
                         </SecondarySkillGroup>
                     </SkillOutline>
                 </SkillContainer>

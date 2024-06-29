@@ -18,6 +18,8 @@ const ParagraphStyle = styled.p`
 `; 
 const GroupContentStyle = styled.div`
     padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
 `; 
 
 export {
